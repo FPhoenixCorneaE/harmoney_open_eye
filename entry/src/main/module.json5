@@ -1,0 +1,122 @@
+{
+  "module": {
+    // 标识当前Module的名称，标签值采用字符串表示（最大长度31个字节），该名称在整个应用要唯一，仅支持英文字符。
+    "name": "entry",
+    // 标识当前Module的类型。类型有两种，分别：
+    // - entry：应用的主模块。
+    // - feature：应用的动态特性模块。
+    // - har：静态共享包模块。
+    // - shared：动态共享包模块。
+    "type": "entry",
+    // 标识当前Module的描述信息，标签值是字符串类型（最长255字节）或对描述内容的字符串资源索引。
+    "description": "$string:module_desc",
+    // 标识当前Module的入口UIAbility名称或者ExtensionAbility名称。标签最大字节长度为255。
+    "mainElement": "EntryAbility",
+    // 标识当前Module可以运行在哪类设备上，标签值采用字符串数组的表示。
+    "deviceTypes": [
+      "phone",
+      "tablet"
+    ],
+    // 标识当前Module是否在用户主动安装的时候安装，表示该Module对应的HAP是否跟随应用一起安装。
+    // - true：主动安装时安装。
+    // - false：主动安装时不安装。
+    "deliveryWithInstall": true,
+    // 标识当前Module是否支持免安装特性。
+    // - true：表示支持免安装特性，且符合免安装约束。
+    // - false：表示不支持免安装特性。
+    // 说明：
+    // - 当应用的entry类型Module的该字段配置为true时，该应用的feature类型的该字段也需要配置为true。
+    // - 当应用的entry类型Module的该字段配置为false时，该应用的feature类型的该字段根据业务需求配置true或false。
+    "installationFree": false,
+    // 标识当前Module的profile资源，用于列举每个页面信息。该标签最大长度为255个字节。
+    "pages": "$profile:main_pages",
+    // 标识当前Module中UIAbility的配置信息，标签值为数组类型，只对当前UIAbility生效。
+    "abilities": [
+      {
+        // 标识当前UIAbility组件的名称，该名称在整个应用要唯一，标签值采用字符串表示（最大长度127个字节），仅支持英文字符。
+        "name": "EntryAbility",
+        // 该标签标识入口UIAbility的代码路径，标签值为字符串（最长为127字节）。
+        "srcEntry": "./ets/entryability/EntryAbility.ts",
+        // 标识当前UIAbility组件的启动模式，可选标签值：
+        // - multiton：多实例模式，每次启动创建一个新的实例。
+        // - singleton：单实例模式，仅第一次启动创建新实例。
+        // - specified：指定实例模式，运行时由开发者决定是否创建新实例。
+        // 可缺省，该标签缺省为“singleton”。
+        "launchType": "singleton",
+        // 标识当前UIAbility组件的描述信息，标签值是字符串类型（最长255字节）或对描述内容的资源索引，要求采用资源索引方式，以支持多语言。
+        "description": "$string:EntryAbility_desc",
+        // 标识当前UIAbility组件的图标，标签值为图标资源文件的索引。
+        "icon": "$media:app_icon",
+        // 标识当前UIAbility组件对用户显示的名称，标签值配置为该名称的资源索引以支持多语言。
+        // 如果UIAbility被配置当前Module的mainElement时，该标签必须配置，且应用内唯一。
+        "label": "$string:EntryAbility_label",
+        // 标识当前UIAbility组件启动页面图标资源文件的索引。取值示例：$media:icon。
+        // 该标签最大字节长度为255。
+        "startWindowIcon": "$media:app_icon",
+        // 标识当前UIAbility组件启动页面背景颜色资源文件的索引。取值示例：$color:red。
+        // 该标签最大字节长度为255。
+        "startWindowBackground": "$color:start_window_background",
+        // 标识当前UIAbility组件销毁后是否从任务列表中移除任务，为布尔类型：
+        // - true表示销毁后移除任务。
+        // - false表示销毁后不移除任务。
+        // 该标签可缺省，缺省值为false。
+        "removeMissionAfterTerminate": true,
+        // 标识当前UIAbility组件启动时的方向。该方向的取值范围包括：
+        // - unspecified：未指定方向，由系统自动判断显示方向。
+        // - landscape：横屏。
+        // - portrait：竖屏。
+        // - landscape_inverted：反向横屏。
+        // - portrait_inverted：反向竖屏。
+        // - auto_rotation：随传感器旋转。
+        // - auto_rotation_landscape：传感器横屏旋转，包括了横屏和反向横屏。
+        // - auto_rotation_portrait：传感器竖屏旋转，包括了竖屏和反向竖屏。
+        // - auto_rotation_restricted：传感器开关打开，方向可随传感器旋转。
+        // - auto_rotation_landscape_restricted：传感器开关打开，方向可随传感器旋转为横屏， 包括了横屏和反向横屏。
+        // - auto_rotation_portrait_restricted：传感器开关打开，方向随可传感器旋转为竖屏， 包括了竖屏和反向竖屏。
+        // - locked：传感器开关关闭，方向锁定。
+        // 该标签可缺省，缺省值为unspecified。
+        "orientation": "portrait",
+        // 标识当前UIAbility组件所支持的窗口模式，包含：
+        // - fullscreen：全屏模式。
+        // - split：分屏模式。
+        // - floating：悬浮窗模式。
+        // 该标签可缺省，缺省值为 ["fullscreen", "split", "floating"]。
+        "supportWindowMode": [
+          "fullscreen",
+          "split",
+          "floating"
+        ],
+        // 标识当前UIAbility组件是否可以被其他应用调用。
+        // - true：表示可以被其他应用调用。
+        // - false：表示不可以被其他应用调用。
+        "exported": true,
+        // 标识当前UIAbility组件或ExtensionAbility组件能够接收的Want的特征集，为数组格式。
+        // 配置规则：
+        // - 对于Entry类型的HAP，应用可以配置多个具有入口能力的skills标签（即配置了ohos.want.action.home和entity.system.home）。
+        // - 对于Feature类型的HAP，只有应用可以配置具有入口能力的skills标签，服务不允许配置。
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ]
+      }
+    ],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+        "reason": "$string:permission_reason_internet",
+        "usedScene": {
+          "abilities": [
+            "FormAbility"
+          ],
+          "when": "inuse"
+        }
+      }
+    ]
+  }
+}

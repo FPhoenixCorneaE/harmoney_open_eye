@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "开眼"
+    },
+    {
+      "name": "permission_reason_internet",
+      "value": "申请网络权限"
+    },
+    {
+      "name": "search_hint",
+      "value": "搜索视频、作者、用户及标签"
+    }
+  ]
+}

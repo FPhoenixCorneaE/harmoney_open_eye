@@ -1,0 +1,32 @@
+{
+  "color": [
+    {
+      "name": "white",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "red",
+      "value": "#FF0000"
+    },
+    {
+      "name": "black",
+      "value": "#000000"
+    },
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "divider_adadad",
+      "value": "#adadad"
+    },
+    {
+      "name": "color_444444",
+      "value": "#444444"
+    },
+    {
+      "name": "color_888888",
+      "value": "#888888"
+    }
+  ]
+}

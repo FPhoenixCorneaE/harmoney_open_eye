@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "recycler_view_pager",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ]
+  }
+}

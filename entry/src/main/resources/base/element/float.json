@@ -1,0 +1,16 @@
+{
+  "float": [
+    {
+      "name": "index_tab_icon_size",
+      "value": "28vp"
+    },
+    {
+      "name": "index_tab_bar_height",
+      "value": "72vp"
+    },
+    {
+      "name": "index_tab_text_size",
+      "value": "16fp"
+    }
+  ]
+}
