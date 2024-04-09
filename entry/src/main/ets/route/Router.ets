@@ -1,24 +1,24 @@
 import router from '@ohos.router'
-import { LogUtil } from '../utils/LogUtil';
+import { loge, logi } from '../utils/LogUtil';
 
 export class Router {
   static push(url: string, params?: Object, routerMode: router.RouterMode = router.RouterMode.Standard) {
     router.pushUrl({ url: url, params: params }, routerMode, (err) => {
       if (err) {
-        LogUtil.error(`pushUrl failed, code is ${err.code}, message is ${err.message}`);
+        loge(`pushUrl failed, code is ${err.code}, message is ${err.message}`);
         return;
       }
-      LogUtil.info('pushUrl success' + url);
+      logi('pushUrl success' + url);
     })
   }
 
   static replace(url: string, params?: Object, routerMode: router.RouterMode = router.RouterMode.Standard) {
     router.replaceUrl({ url: url, params: params }, routerMode, (err) => {
       if (err) {
-        LogUtil.error(`replaceUrl failed, code is ${err.code}, message is ${err.message}`);
+        loge(`replaceUrl failed, code is ${err.code}, message is ${err.message}`);
         return;
       }
-      LogUtil.info('replaceUrl success' + url);
+      logi('replaceUrl success' + url);
     })
   }
 

@@ -7,7 +7,9 @@
   "license": "",
   "dependencies": {
     // RecyclerViewPager是一个支持自定义左右翻页切换效果、上下翻页切换效果、类似Material风格的容器组件。
-    "recycler_view_pager": "file:./recycler_view_pager"
+    "recycler_view_pager": "file:./recycler_view_pager",
+    // Axios ，是一个基于 promise 的网络请求库，可以运行 node.js 和浏览器中。本库基于Axios 原库v1.3.4版本进行适配，使其可以运行在 OpenHarmony，并沿用其现有用法和特性。
+    "@ohos/axios": "^2.2.0"
   },
   "devDependencies": {
     "@ohos/hypium": "1.0.6"

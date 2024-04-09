@@ -1,6 +1,10 @@
 import curves from '@ohos.curves'
+import emitter from '@ohos.events.emitter'
 import { CommonConstants } from '../constant/CommonConstants'
+import { EventKey } from '../event/Event'
+import { LoadingDialogEvent } from '../event/LoadingDialogEvent'
 import indexViewModel, { IndexTab } from '../viewmodel/IndexViewModel'
+import { LoadingDialog } from '../widget/LoadingDialog'
 import { HomePage } from './index/HomePage'
 
 
@@ -12,6 +16,45 @@ import { HomePage } from './index/HomePage'
 struct IndexPage {
   @State selectedIndex: number = 0
   @State homeIconScale: number = 1
+  @State loadingTips: string = "加载中..."
+  @State isShowLoading: boolean = false
+  /** 加载弹窗 */
+  private loadingDialogController: CustomDialogController = new CustomDialogController({
+    builder: LoadingDialog({ loadingTips: this.loadingTips }),
+    alignment:DialogAlignment.Center,
+    offset:{dx:0,dy:0},
+    autoCancel: false,
+    customStyle:true,
+    cancel: () => {
+      this.isShowLoading = false
+    }
+  })
+
+  aboutToAppear() {
+    emitter.on(LoadingDialogEvent, (event) => {
+      if (event.data.showLoading == true && !this.isShowLoading) {
+        this.isShowLoading = true
+        this.loadingTips = event.data.loadingTips
+        this.loadingDialogController.open()
+      } else if (event.data.showLoading == false) {
+        this.isShowLoading = false
+        this.loadingDialogController.close()
+      }
+    })
+  }
+
+  aboutToDisappear() {
+    this.loadingDialogController = null
+    emitter.off(EventKey.LOADING_DIALOG)
+  }
+
+  onPageShow() {
+    console.debug("onPageShow()：》》》》》》页面可见")
+  }
+
+  onPageHide() {
+    console.debug("onPageHide()：》》》》》》页面不可见")
+  }
 
   build() {
     Column() {
