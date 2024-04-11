@@ -1,7 +1,12 @@
+import apiService from '../http/ApiService';
+import { HomeModel } from '../model/HomeModel';
+import { BaseViewModel, HttpResult } from './BaseViewModel';
+
+
 /**
  * 主页ViewModel
  */
-class IndexViewModel {
+class IndexViewModel extends BaseViewModel {
   /** 主界面底部标签 */
   indexTabs = [
     new IndexTab("首页", $r("app.media.ic_tab_homepage_selected"), $r("app.media.ic_tab_homepage_normal")),
@@ -9,6 +14,13 @@ class IndexViewModel {
     new IndexTab("通知", $r("app.media.ic_tab_notification_selected"), $r("app.media.ic_tab_notification_normal")),
     new IndexTab("我的", $r("app.media.ic_tab_me_selected"), $r("app.media.ic_tab_me_normal")),
   ]
+
+  async getHomeRecommend(result?: HttpResult<HomeModel>) {
+    await this.httpRequest(apiService.getHomeRecommend())
+      .then((response) => {
+        result?.(response)
+      })
+  }
 }
 
 /**

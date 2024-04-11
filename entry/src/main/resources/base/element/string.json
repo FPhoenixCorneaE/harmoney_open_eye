@@ -19,6 +19,14 @@
     {
       "name": "search_hint",
       "value": "搜索视频、作者、用户及标签"
+    },
+    {
+      "name": "font_family_name_fz_lan_ting_hei_s_db1_gb_regular",
+      "value": "fz_lan_ting_hei_s_db1_gb_regular"
+    },
+    {
+      "name": "font_family_src_fz_lan_ting_hei_s_db1_gb_regular",
+      "value": "/font/fz_lan_ting_hei_s_db1_gb_regular.ttf"
     }
   ]
 }

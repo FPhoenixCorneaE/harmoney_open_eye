@@ -1,4 +1,5 @@
 import hilog from '@ohos.hilog';
+import printer from './log/Printer';
 
 const prefix = "OpenEye"
 const format = `%{public}s, %{public}s`
@@ -22,4 +23,8 @@ export function loge(...args: string[]) {
 
 export function logf(...args: string[]) {
   hilog.fatal(domain, prefix, format, args);
+}
+
+export function logjson(data: any, prefix?: string) {
+  printer.info(data, prefix)
 }

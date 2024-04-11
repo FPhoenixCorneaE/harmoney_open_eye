@@ -1,8 +1,10 @@
 import curves from '@ohos.curves'
 import emitter from '@ohos.events.emitter'
+import font from '@ohos.font'
 import { CommonConstants } from '../constant/CommonConstants'
 import { EventKey } from '../event/Event'
 import { LoadingDialogEvent } from '../event/LoadingDialogEvent'
+import { resource2String } from '../utils/ResourceUtil'
 import indexViewModel, { IndexTab } from '../viewmodel/IndexViewModel'
 import { LoadingDialog } from '../widget/LoadingDialog'
 import { HomePage } from './index/HomePage'
@@ -21,16 +23,20 @@ struct IndexPage {
   /** 加载弹窗 */
   private loadingDialogController: CustomDialogController = new CustomDialogController({
     builder: LoadingDialog({ loadingTips: this.loadingTips }),
-    alignment:DialogAlignment.Center,
-    offset:{dx:0,dy:0},
+    alignment: DialogAlignment.Center,
+    offset: { dx: 0, dy: 0 },
     autoCancel: false,
-    customStyle:true,
+    customStyle: true,
     cancel: () => {
       this.isShowLoading = false
     }
   })
 
   aboutToAppear() {
+    // font.registerFont({
+    //   familyName: resource2String($r("app.string.font_family_name_fz_lan_ting_hei_s_db1_gb_regular")),
+    //   familySrc: resource2String($r("app.string.font_family_src_fz_lan_ting_hei_s_db1_gb_regular"))
+    // })
     emitter.on(LoadingDialogEvent, (event) => {
       if (event.data.showLoading == true && !this.isShowLoading) {
         this.isShowLoading = true

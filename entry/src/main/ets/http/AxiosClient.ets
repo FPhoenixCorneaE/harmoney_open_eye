@@ -1,6 +1,5 @@
 import { AxiosError, AxiosRequestHeaders } from '@ohos/axios';
-import { JsonUtil } from '../utils/JsonUtil';
-import { logd, loge } from '../utils/LogUtil';
+import { logd, loge, logjson } from '../utils/LogUtil';
 import { hideLoadingDialog, showLoadingDialog } from '../utils/DialogUtil';
 import { StorageUtil } from '../utils/StorageUtil';
 import { Preferences } from '../constant/Preferences';
@@ -25,8 +24,8 @@ const axiosClient = new AxiosHttpRequest({
       // 在发送请求之前做一些处理，例如打印请求信息
       logd('网络请求Request 请求方法:', `${config.method}`);
       logd('网络请求Request 请求链接:', `${config.url}`);
-      logd('网络请求Request Params:', `\n${JsonUtil.stringify(config.params)}`);
-      logd('网络请求Request Data:', `${JsonUtil.stringify(config.data)}`);
+      logjson(config.params, '网络请求Request Params');
+      logjson(config.data, '网络请求Request Data');
       axiosClient.config.showLoading = config.showLoading
       if (config.showLoading) {
         showLoadingDialog("加载中...")
@@ -57,7 +56,7 @@ const axiosClient = new AxiosHttpRequest({
       if (axiosClient.config.showLoading) {
         hideLoadingDialog()
       }
-      logd('网络请求响应Response:', `\n${JsonUtil.stringify(response.data)}`);
+      logjson(response.data, '网络请求响应Response')
       if (response.status === 200) {
         // @ts-ignore
         const checkResultCode = response.config.checkResultCode
@@ -80,3 +79,5 @@ const axiosClient = new AxiosHttpRequest({
     },
   }
 });
+
+export default axiosClient;
