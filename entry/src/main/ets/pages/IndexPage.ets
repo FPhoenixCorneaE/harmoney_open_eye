@@ -128,7 +128,7 @@ struct IndexPage {
       .width(CommonConstants.MATCH_PARENT)
       .backgroundColor($r("app.color.white"))
       // 分割线
-      Divider().strokeWidth(0.8).color($r("app.color.divider_adadad")).width(CommonConstants.MATCH_PARENT)
+      Divider().strokeWidth("0.8vp").color($r("app.color.divider_adadad")).width(CommonConstants.MATCH_PARENT)
     }
   }
 }

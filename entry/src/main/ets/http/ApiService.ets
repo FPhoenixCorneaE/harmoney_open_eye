@@ -1,12 +1,13 @@
 import { HomeModel } from '../model/HomeModel'
 import axiosClient from './AxiosClient'
 
-let baseUrl = "https://baobab.kaiyanapp.com/"
+export const baseUrl = "https://baobab.kaiyanapp.com/"
 
 export class ApiService {
-  getHomeRecommend() {
+
+  getHomeData(url: string) {
     return axiosClient.get<HomeModel>({
-      url: baseUrl + "api/v5/index/tab/allRec",
+      url: url,
       showLoading: true,
     })
   }

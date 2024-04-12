@@ -2,7 +2,7 @@ export interface HomeModel {
   itemList: ItemList[];
   count: number;
   total: number;
-  nextPageUrl: string;
+  nextPageUrl?: string;
   adExist: boolean;
 }
 
@@ -27,6 +27,7 @@ export interface Data {
   footer?: any;
   text?: string;
   follow?: Follow;
+  rightText?: string;
 }
 
 

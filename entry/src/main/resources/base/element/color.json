@@ -21,6 +21,10 @@
       "value": "#adadad"
     },
     {
+      "name": "divider_ededed",
+      "value": "#ededed"
+    },
+    {
       "name": "color_333333",
       "value": "#333333"
     },
@@ -31,6 +35,10 @@
     {
       "name": "color_888888",
       "value": "#888888"
+    },
+    {
+      "name": "color_4687d7",
+      "value": "#4687d7"
     }
   ]
 }
