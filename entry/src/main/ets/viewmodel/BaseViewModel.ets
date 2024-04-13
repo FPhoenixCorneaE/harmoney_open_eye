@@ -1,6 +1,6 @@
 
 
-export type HttpResult<T> = (result: T) => void
+export type HttpResult<T> = (result?: T) => void
 
 /**
  * BaseViewModel

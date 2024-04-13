@@ -1,4 +1,4 @@
-import apiService, { baseUrl } from '../http/ApiService';
+import apiService from '../http/ApiService';
 import { HomeModel } from '../model/HomeModel';
 import { BaseViewModel, HttpResult } from './BaseViewModel';
 
@@ -15,10 +15,14 @@ class IndexViewModel extends BaseViewModel {
     new IndexTab("我的", $r("app.media.ic_tab_me_selected"), $r("app.media.ic_tab_me_normal")),
   ]
 
-  async getHomeRecommend(url?: string, result?: HttpResult<HomeModel>) {
-    if (url == undefined || url == null) {
-      url = baseUrl + "api/v5/index/tab/allRec"
-    }
+  async getHomeDiscovery(url?: string, result?: HttpResult<HomeModel>) {
+    await this.httpRequest(apiService.getHomeData(url))
+      .then((response) => {
+        result?.(response)
+      })
+  }
+
+  async getHomeData(url?: string, result?: HttpResult<HomeModel>) {
     await this.httpRequest(apiService.getHomeData(url))
       .then((response) => {
         result?.(response)

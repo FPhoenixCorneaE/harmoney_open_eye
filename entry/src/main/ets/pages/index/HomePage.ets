@@ -1,10 +1,9 @@
 import window from '@ohos.window'
 import { CommonConstants } from '../../constant/CommonConstants'
 import { materialContainderTop } from 'recycler_view_pager'
-import { RecommendPage } from '../home/RecommendPage'
-import { DiscoveryPage } from '../home/DiscoveryPage'
-import { DailyPage } from '../home/DailyPage'
+import { HomeItemPage } from '../home/HomeItemPage'
 import display from '@ohos.display'
+import { EyepetizerApi } from '../../http/EyepetizerApi'
 
 /**
  * 首页
@@ -55,21 +54,21 @@ export struct HomePage {
   build() {
     Column() {
       this.SearchBox()
-      materialContainderTop({ index: $index, model: $model, titles: this.titles})
+      materialContainderTop({ index: $index, model: $model, titles: this.titles })
       Tabs({ index: this.index, controller: this.controller }) {
         TabContent() {
           // 发现
-          DiscoveryPage()
+          HomeItemPage({ url: EyepetizerApi.HOME_DISCOVERY })
         }
 
         TabContent() {
           // 推荐
-          RecommendPage()
+          HomeItemPage({ url: EyepetizerApi.HOME_RECOMMEND })
         }
 
         TabContent() {
           // 日报
-          DailyPage()
+          HomeItemPage({ url: EyepetizerApi.HOME_DAILY })
         }
       }
       .width(CommonConstants.MATCH_PARENT)

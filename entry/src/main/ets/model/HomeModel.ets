@@ -28,26 +28,28 @@ export interface Data {
   text?: string;
   follow?: Follow;
   rightText?: string;
+  title?: string;
+  image?: string;
 }
 
 
 export interface Header {
-  id: number;
-  title: string;
-  font: string;
-  subTitle: string;
-  subTitleFont: string;
-  textAlign: string;
-  cover: any;
-  label: any;
-  actionUrl: string;
-  labelList: any;
-  rightText: string;
-  icon: string;
-  iconType: string;
-  description: any;
-  time: number;
-  showHateVideo: boolean;
+  id?: number;
+  title?: string;
+  font?: string;
+  subTitle?: string;
+  subTitleFont?: string;
+  textAlign?: string;
+  cover?: any;
+  label?: any;
+  actionUrl?: string;
+  labelList?: any;
+  rightText?: string;
+  icon?: string;
+  iconType?: string;
+  description?: any;
+  time?: number;
+  showHateVideo?: boolean;
 }
 
 

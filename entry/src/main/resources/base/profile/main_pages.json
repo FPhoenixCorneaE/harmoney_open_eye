@@ -3,9 +3,6 @@
     "pages/SplashPage",
     "pages/IndexPage",
     "pages/index/HomePage",
-    "pages/home/RecommendPage",
-    "pages/home/DiscoveryPage",
-    "pages/home/DailyPage",
     "pages/login/LoginPage"
   ]
 }

@@ -7,6 +7,8 @@ import { Router } from '../route/Router';
 import { RoutePath } from '../route/RoutePath';
 import showToast from '../utils/ToastUtil'
 import AxiosHttpRequest, { errorHandler } from './AxiosHttpRequest'
+import deviceInfo from '@ohos.deviceInfo';
+import display from '@ohos.display';
 
 
 /**
@@ -17,11 +19,23 @@ const axiosClient = new AxiosHttpRequest({
   timeout: 10 * 1000,
   checkResultCode: false,
   headers: {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
   } as AxiosRequestHeaders,
+  params: {
+    "deviceModel": deviceInfo.deviceType,
+    "udid": deviceInfo.udid,
+    "size": display.getDefaultDisplaySync().width + "x" + display.getDefaultDisplaySync().height,
+    "system_version_code": deviceInfo.sdkApiVersion,
+    "first_channel": deviceInfo.manufacture,
+    "last_channel": deviceInfo.brand,
+  },
   interceptorHooks: {
     requestInterceptor: async (config) => {
       // 在发送请求之前做一些处理，例如打印请求信息
+      if (!config.url.includes("api/v5/index/tab/allRec") && !config.url.includes("api/v3/messages")) {
+        config.params["vc"] = "6030012"
+        config.params["vn"] = "6.3.1"
+      }
       logd('网络请求Request 请求方法:', `${config.method}`);
       logd('网络请求Request 请求链接:', `${config.url}`);
       logjson(config.params, '网络请求Request Params');
@@ -56,6 +70,7 @@ const axiosClient = new AxiosHttpRequest({
       if (axiosClient.config.showLoading) {
         hideLoadingDialog()
       }
+      logd('网络请求Response:', `${response.config.url}`);
       logjson(response.data, '网络请求响应Response')
       if (response.status === 200) {
         // @ts-ignore
