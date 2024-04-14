@@ -94,144 +94,145 @@ export struct SpecialSquareCardCollection {
 export struct SpecialSquareCardCollectionPreview {
   build() {
     Stack() {
-      SpecialSquareCardCollection({ data: {
+      SpecialSquareCardCollection({
         data: {
-          header: {
-            title: "热门分类",
-            rightText: "查看全部分类"
-          },
-          itemList: [
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
-              },
-              type: "squareCardOfCategory"
+          data: {
+            header: {
+              title: "热门分类",
+              rightText: "查看全部分类"
             },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+            itemList: [
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-            {
-              data: {
-                image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
-                title: "#广告",
-                dataType: "SquareCard",
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
               },
-              type: "squareCardOfCategory"
-            },
-          ]
-        }
-      } })
+              {
+                data: {
+                  image: "http://img.kaiyanapp.com/57472e13fd2b6c9655c8a600597daf4d.png?imageMogr2/quality/60/format/jpg",
+                  title: "#广告",
+                  dataType: "SquareCard",
+                },
+                type: "squareCardOfCategory"
+              },
+            ]
+          }
+        } })
     }
   }
 }
