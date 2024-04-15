@@ -38,7 +38,7 @@ export struct ColumnCardList {
           (item: ItemList, index) => {
             GridItem() {
               Stack() {
-                Image(item.data?.image?.substring(0, item.data?.image?.indexOf("?")))
+                Image(item.data?.image)
                   // 占位图
                   .alt("#ccededed")
                   .width(CommonConstants.MATCH_PARENT)
@@ -60,8 +60,6 @@ export struct ColumnCardList {
                   .textAlign(TextAlign.Center)
                   .fontFamily($r("app.string.font_family_name_fz_lan_ting_hei_s_db1_gb_regular"))
                   .margin({left: "14vp", right: "14vp"})
-
-
               }
             }
           }

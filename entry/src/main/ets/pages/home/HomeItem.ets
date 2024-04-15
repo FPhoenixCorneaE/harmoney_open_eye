@@ -6,6 +6,7 @@ import { TextCardFooter2 } from './TextCardFooter2'
 import { TextCardFooter3 } from './TextCardFooter3'
 import { TextCardHeader5 } from './TextCardHeader5'
 import { TextCardHeader7 } from './TextCardHeader7'
+import { VideoSmallCard } from './VideoSmallCard'
 
 @Component
 export struct HomeItem {
@@ -34,6 +35,10 @@ export struct HomeItem {
       } else if (this.item.type == "horizontalScrollCard") {
         if (this.item.data.dataType == "HorizontalScrollCard") {
           HorizontalScrollCard({ data: this.item })
+        }
+      } else if (this.item.type == "videoSmallCard") {
+        if (this.item.data.dataType == "VideoBeanForClient") {
+          VideoSmallCard({ data: this.item })
         }
       }
     }

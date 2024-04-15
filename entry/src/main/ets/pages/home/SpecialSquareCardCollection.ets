@@ -41,7 +41,7 @@ export struct SpecialSquareCardCollection {
           (item: ItemList, index) => {
             GridItem() {
               Stack() {
-                Image(item.data?.image?.substring(0, item.data?.image?.indexOf("?")))
+                Image(item.data?.image)
                   // 占位图
                   .alt("#ccededed")
                   .width(CommonConstants.MATCH_PARENT)

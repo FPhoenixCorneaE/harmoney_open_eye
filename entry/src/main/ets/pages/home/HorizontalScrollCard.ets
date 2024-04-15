@@ -12,7 +12,7 @@ export struct HorizontalScrollCard {
       Swiper(this.swiperController) {
         ForEach(this.data.data?.itemList, (item: ItemList, index) => {
           Stack() {
-            Image(item.data?.image?.substring(0, item.data?.image?.indexOf("?")))
+            Image(item.data?.image)
               // 占位图
               .alt("#ccededed")
               .width(CommonConstants.MATCH_PARENT)

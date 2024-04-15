@@ -30,6 +30,10 @@ export interface Data {
   rightText?: string;
   title?: string;
   image?: string;
+  cover?: Cover;
+  duration?: number;
+  category?: string;
+  library?: string;
 }
 
 
@@ -67,6 +71,14 @@ export interface Follow {
   followed?: boolean; // false
   itemId?: number; // 2003
   itemType?: string; // author
+}
+
+export interface Cover {
+  blurred?: string;
+  detail?: string;
+  feed?: string;
+  homepage?: string;
+  sharing?: any;
 }
 
 

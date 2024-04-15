@@ -62,6 +62,10 @@ struct IndexPage {
     console.debug("onPageHide()：》》》》》》页面不可见")
   }
 
+  onBackPress(){
+    console.debug("onBackPress()：》》》》》》点击返回按钮")
+  }
+
   build() {
     Column() {
       Tabs({
