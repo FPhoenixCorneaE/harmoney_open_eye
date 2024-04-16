@@ -104,7 +104,6 @@ export struct VideoSmallCardPreview {
             title: "当病毒把人类隔离在家，大自然开始了狂欢",
             category: "动画",
             library: "DAILY"
-
           },
         }
       })

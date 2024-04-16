@@ -10,6 +10,7 @@ export struct HomeItemPage {
   private nextPageUrl?: string = null
   @State isRefreshing: boolean = false
   @State datas: ItemList[] = []
+  @State isTheEnd: boolean = false
 
   aboutToAppear() {
     this.nextPageUrl = this.url
@@ -27,17 +28,34 @@ export struct HomeItemPage {
         }
         this.isRefreshing = false
       })
+    } else {
+      this.isTheEnd = true
     }
   }
 
   build() {
     Refresh({ refreshing: $$this.isRefreshing, offset: 100, friction: 100 }) {
-      List({ space: 10, initialIndex: 0 }) {
+      List({ space: 0, initialIndex: 0 }) {
         ForEach(this.datas, (item: ItemList, index: number) => {
           ListItem() {
             HomeItem({ item: item })
           }
         })
+        ListItem() {
+          if (this.isTheEnd) {
+            Column() {
+              Stack() {
+                Text("- The End -")
+                  .fontColor("#4d000000")
+                  .fontSize("14fp")
+              }
+              .width(CommonConstants.MATCH_PARENT)
+              .padding("8vp")
+
+              Stack().height("160vp")
+            }
+          }
+        }
       }
       .width(CommonConstants.MATCH_PARENT)
       .height(CommonConstants.MATCH_PARENT)

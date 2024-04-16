@@ -34,6 +34,8 @@ export interface Data {
   duration?: number;
   category?: string;
   library?: string;
+  description?: string;
+  icon?: string;
 }
 
 
