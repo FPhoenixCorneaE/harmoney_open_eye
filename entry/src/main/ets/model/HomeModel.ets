@@ -36,6 +36,7 @@ export interface Data {
   library?: string;
   description?: string;
   icon?: string;
+  label?: Label;
 }
 
 
@@ -81,6 +82,13 @@ export interface Cover {
   feed?: string;
   homepage?: string;
   sharing?: any;
+}
+
+export interface Label {
+  actionUrl?: string;
+  text?: string;
+  card?: string;
+  detail?: any;
 }
 
 
