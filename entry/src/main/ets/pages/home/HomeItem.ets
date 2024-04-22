@@ -2,6 +2,7 @@ import { ItemList } from '../../model/HomeModel'
 import { Banner } from './Banner'
 import { Banner3 } from './Banner3'
 import { ColumnCardList } from './ColumnCardList'
+import { FollowCard } from './FollowCard'
 import { HorizontalScrollCard } from './HorizontalScrollCard'
 import { SpecialSquareCardCollection } from './SpecialSquareCardCollection'
 import { TagBriefCard } from './TagBriefCard'
@@ -57,6 +58,10 @@ export struct HomeItem {
       } else if (this.item.type == "banner3") {
         if (this.item.data.dataType == "Banner") {
           Banner3({ data: this.item })
+        }
+      } else if (this.item.type == "followCard") {
+        if (this.item.data.dataType == "FollowCard") {
+          FollowCard({ data: this.item })
         }
       }
     }

@@ -37,6 +37,8 @@ export interface Data {
   description?: string;
   icon?: string;
   label?: Label;
+  content?: Content;
+  ad?: boolean;
 }
 
 
@@ -61,12 +63,12 @@ export interface Header {
 
 
 export interface Content {
-  type: string;
-  data: Data;
-  trackingData: any;
-  tag: any;
-  id: number;
-  adIndex: number;
+  type?: string;
+  data?: Data;
+  trackingData?: any;
+  tag?: any;
+  id?: number;
+  adIndex?: number;
 }
 
 
