@@ -90,6 +90,7 @@ export struct FollowCard {
             .width("10vp")
             .aspectRatio(1)
             .backgroundColor("#4687d7")
+            .border({ width: "1vp", color: $r("app.color.divider_ededed"), radius: "10vp" })
             .borderRadius("10vp")
             .margin({ right: "1vp", bottom: "1vp" })
         }

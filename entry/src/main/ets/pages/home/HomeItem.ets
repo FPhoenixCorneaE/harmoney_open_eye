@@ -4,6 +4,7 @@ import { Banner3 } from './Banner3'
 import { ColumnCardList } from './ColumnCardList'
 import { FollowCard } from './FollowCard'
 import { HorizontalScrollCard } from './HorizontalScrollCard'
+import { InformationCard } from './InformationCard'
 import { SpecialSquareCardCollection } from './SpecialSquareCardCollection'
 import { TagBriefCard } from './TagBriefCard'
 import { TextCardFooter2 } from './TextCardFooter2'
@@ -62,6 +63,10 @@ export struct HomeItem {
       } else if (this.item.type == "followCard") {
         if (this.item.data.dataType == "FollowCard") {
           FollowCard({ data: this.item })
+        }
+      } else if (this.item.type == "informationCard") {
+        if (this.item.data.dataType == "InformationCard") {
+          InformationCard({ data: this.item })
         }
       }
     }

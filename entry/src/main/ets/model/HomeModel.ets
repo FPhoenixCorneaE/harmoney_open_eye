@@ -1,3 +1,5 @@
+
+
 export interface HomeModel {
   itemList: ItemList[];
   count: number;
@@ -39,6 +41,7 @@ export interface Data {
   label?: Label;
   content?: Content;
   ad?: boolean;
+  titleList?: string[];
 }
 
 
